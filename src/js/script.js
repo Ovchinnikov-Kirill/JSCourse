@@ -81,10 +81,12 @@ const personalMovieDB = {
      for (let i = 0; i < 2; i++) {
          const a = prompt('Один из просмотренный вами фильмов?'),
                b = +prompt('На сколько вы бы оценили этот фильм?');
+//Провека на пустую строку и отмену действия
         if (a != null && b != null && a != '' && b!= '' &&  a.length <= 50 ) {
             personalMovieDB.movies[a] = b;
             console.log('done');
         } else {
+//Если в if false, то возвращаем итерацию на шаг назад
             console.log('error');
             i--;
         }
